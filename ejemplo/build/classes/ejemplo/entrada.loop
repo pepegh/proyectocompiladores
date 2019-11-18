@@ -1,0 +1,35 @@
+importar "index.loop"
+
+
+clase Rectangulo 
+propiedades publicas: 
+estatico entero ancho = 2 
+entero largo 
+metodos publicos: 
+constructor(entero l) 
+largo = l
+ 
+destructor() 
+eliminar ancho
+ 
+entero obtenerArea() 
+devolver ancho*largo
+ 
+/*este metodo es el unico que puede ejecutarse 
+* sin necesidad de una instancia de instanciar 
+* la clase y lograr modificar la propiedad 
+* estatica 
+*/ 
+estatico nulo anchoCuadrado() 
+ancho=ancho*ancho 
+//la siguiente lınea genera errores 
+//largo=largo+1 
+entero Principal() 
+//accediendo a la propiedad ancho 
+escribir Rectangulo.ancho 
+//instanciando dos rectangulos 
+Rectangulo r1 = instanciar Rectangulo(5) 
+Rectangulo r2 = instanciar Rectangulo(10)
+entro a = a++
+real b = b--
+cadena x == b

@@ -38,18 +38,17 @@ public class Ejemplo {
             
             analizadorNumero.next_token();
             
-            /*analizadorNumero.tokens.forEach((token) -> {
-                System.out.println(token);});*/
-            //impresion de tokens en consola
-            /*for (int i = 0; i<analizadorNumero.tokens.size();i++){
-                System.out.println("Tipo = "+analizadorNumero.tokens.get(i).getTipo() + " Lexema = "+analizadorNumero.tokens.get(i).getLexema() );
-            }*/
             //impresion de tokens en archivo tokens.txt
             FileWriter fichero = null;
             PrintWriter pw = null;
             try
             {
-                fichero = new FileWriter("C:\\Users\\pepeg\\OneDrive\\Escritorio\\NetBeansProjects\\Analizadorlexico\\ejemplo\\src\\ejemplo\\tokens.loop");
+                String destino;
+
+                Scanner teclado2 = new Scanner(System.in);
+                System.out.print("Introduzca la ruta del archivo tokens.loop a escribir: ");
+                destino = teclado.nextLine();
+                fichero = new FileWriter(destino);
                 pw = new PrintWriter(fichero);
 
                 for (int i = 0; i<analizadorNumero.tokens.size();i++){

@@ -527,7 +527,7 @@ class Numero implements java_cup.runtime.Scanner {
   private boolean zzAtBOL = true;
 
   /** zzAtEOF == true iff the scanner is at the EOF */
-  public boolean zzAtEOF;
+  private boolean zzAtEOF;
 
   /** denotes if the user-EOF-code has already been executed */
   private boolean zzEOFDone;
@@ -934,289 +934,207 @@ class Numero implements java_cup.runtime.Scanner {
             // fall through
           case 43: break;
           case 2: 
-            { System.out.println("Encontre un Simbolo aritmetico: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("simaritmetico",yytext()));
+            { tokens.add(new Token("simaritmetico",yytext()));
             } 
             // fall through
           case 44: break;
           case 3: 
-            { System.out.println("Encontre un Entero: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("entero",yytext()));
+            { tokens.add(new Token("entero",yytext()));
             } 
             // fall through
           case 45: break;
           case 4: 
-            { System.out.println("Encontre una Cadena: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("cadena",yytext()));
+            { tokens.add(new Token("cadena",yytext()));
             } 
             // fall through
           case 46: break;
           case 5: 
-            { System.out.println("Encontre una Asignacion: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("asignacion",yytext()));
+            { tokens.add(new Token("asignacion",yytext()));
             } 
             // fall through
           case 47: break;
           case 6: 
-            { System.out.println("Encontre una Abertura de parentesis: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("openpar",yytext()));
+            { tokens.add(new Token("openpar",yytext()));
             } 
             // fall through
           case 48: break;
           case 7: 
-            { System.out.println("Encontre un Cierre de parentesis: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("closepar",yytext()));
+            { tokens.add(new Token("closepar",yytext()));
             } 
             // fall through
           case 49: break;
           case 8: 
-            { System.out.println("Encontre una Condicion: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("condicion",yytext()));
+            { tokens.add(new Token("condicion",yytext()));
             } 
             // fall through
           case 50: break;
           case 9: 
-            { System.out.println("Encontre Dos puntos: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("dospuntos",yytext()));
+            { tokens.add(new Token("dospuntos",yytext()));
             } 
             // fall through
           case 51: break;
           case 10: 
-            { System.out.println("Encontre una apertura de corchetes: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("opencorch",yytext()));
+            { tokens.add(new Token("opencorch",yytext()));
             } 
             // fall through
           case 52: break;
           case 11: 
-            { System.out.println("Encontre un cierre de corchetes: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("closecorch",yytext()));
+            { tokens.add(new Token("closecorch",yytext()));
             } 
             // fall through
           case 53: break;
           case 12: 
-            { System.out.println("Encontre una Comilla: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("comilla",yytext()));
+            { tokens.add(new Token("comilla",yytext()));
             } 
             // fall through
           case 54: break;
           case 13: 
-            { System.out.println("Encontre un Fin de linea: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("fi",yytext()));
+            { tokens.add(new Token("fl",yytext()));
             } 
             // fall through
           case 55: break;
           case 14: 
-            { System.out.println("Encontre un operador logico: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("operadorlogico",yytext()));
+            { tokens.add(new Token("operadorlogico",yytext()));
             } 
             // fall through
           case 56: break;
           case 15: 
-            { System.out.println("Encontre un Decremento: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("decremento",yytext()));
+            { tokens.add(new Token("decremento",yytext()));
             } 
             // fall through
           case 57: break;
           case 16: 
-            { System.out.println("Encontre un Incremento: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("incremento",yytext()));
+            { tokens.add(new Token("incremento",yytext()));
             } 
             // fall through
           case 58: break;
           case 17: 
-            { System.out.println("Encontre un Si: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("if",yytext()));
+            { tokens.add(new Token("if",yytext()));
             } 
             // fall through
           case 59: break;
           case 18: 
-            { System.out.println("Encontre un Cierre de comentario: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("closecom",yytext()));
+            { tokens.add(new Token("closecom",yytext()));
             } 
             // fall through
           case 60: break;
           case 19: 
-            { System.out.println("Encontre Apertura de comentario: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("opencom",yytext()));
+            { tokens.add(new Token("opencom",yytext()));
             } 
             // fall through
           case 61: break;
           case 20: 
-            { System.out.println("Encontre un Real: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("real",yytext()));
+            { tokens.add(new Token("real",yytext()));
             } 
             // fall through
           case 62: break;
           case 21: 
-            { System.out.println("Encontre un tipo de variable: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("TipoVariable",yytext()));
+            { tokens.add(new Token("TipoVariable",yytext()));
             } 
             // fall through
           case 63: break;
           case 22: 
-            { System.out.println("Encontre una funcion matematica: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("funcmath",yytext()));
+            { tokens.add(new Token("funcmath",yytext()));
             } 
             // fall through
           case 64: break;
           case 23: 
-            { System.out.println("Encontre un Sino: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("else",yytext()));
+            { tokens.add(new Token("else",yytext()));
             } 
             // fall through
           case 65: break;
           case 24: 
-            { System.out.println("Encontre un Desde: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("for",yytext()));
+            { tokens.add(new Token("for",yytext()));
             } 
             // fall through
           case 66: break;
           case 25: 
-            { System.out.println("Encontre un Booleano: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("booleano",yytext()));
+            { tokens.add(new Token("booleano",yytext()));
             } 
             // fall through
           case 67: break;
           case 26: 
-            { System.out.println("Encontre un declaracion de clase: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("class",yytext()));
+            { tokens.add(new Token("class",yytext()));
             } 
             // fall through
           case 68: break;
           case 27: 
-            { System.out.println("Encontre un Hacer: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("do",yytext()));
+            { tokens.add(new Token("do",yytext()));
             } 
             // fall through
           case 69: break;
           case 28: 
-            { System.out.println("Encontre un Archivo: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("file",yytext()));
+            { tokens.add(new Token("file",yytext()));
             } 
             // fall through
           case 70: break;
           case 29: 
-            { System.out.println("Encontre una Inclucion: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("include",yytext()));
+            { tokens.add(new Token("include",yytext()));
             } 
             // fall through
           case 71: break;
           case 30: 
-            { System.out.println("Encontre una declaracion de metodos: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("methods",yytext()));
+            { tokens.add(new Token("methods",yytext()));
             } 
             // fall through
           case 72: break;
           case 31: 
-            { System.out.println("Encontre un tipo de acceso: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("tipoacceso",yytext()));
+            { tokens.add(new Token("tipoacceso",yytext()));
             } 
             // fall through
           case 73: break;
           case 32: 
-            { System.out.println("Encontre una Eliminacion: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("delete",yytext()));
+            { tokens.add(new Token("delete",yytext()));
             } 
             // fall through
           case 74: break;
           case 33: 
-            { System.out.println("Encontre un Estatico: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("static",yytext()));
+            { tokens.add(new Token("static",yytext()));
             } 
             // fall through
           case 75: break;
           case 34: 
-            { System.out.println("Encontre un Escribir: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("print",yytext()));
+            { tokens.add(new Token("print",yytext()));
             } 
             // fall through
           case 76: break;
           case 35: 
-            { System.out.println("Encontre un Entonces: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("then",yytext()));
+            { tokens.add(new Token("then",yytext()));
             } 
             // fall through
           case 77: break;
           case 36: 
-            { System.out.println("Encontre un extends: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("extends",yytext()));
+            { tokens.add(new Token("extends",yytext()));
             } 
             // fall through
           case 78: break;
           case 37: 
-            { System.out.println("Encontre un Retorno: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("return",yytext()));
+            { tokens.add(new Token("return",yytext()));
             } 
             // fall through
           case 79: break;
           case 38: 
-            { System.out.println("Encontre una Importacion: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("import",yytext()));
+            { tokens.add(new Token("import",yytext()));
             } 
             // fall through
           case 80: break;
           case 39: 
-            { System.out.println("Encontre un Mientras: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("while",yytext()));
+            { tokens.add(new Token("while",yytext()));
             } 
             // fall through
           case 81: break;
           case 40: 
-            { System.out.println("Encontre una Instanciacion: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("instance",yytext()));
+            { tokens.add(new Token("instance",yytext()));
             } 
             // fall through
           case 82: break;
           case 41: 
-            { System.out.println("Encontre una declaracion de propiedades: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("props",yytext()));
+            { tokens.add(new Token("props",yytext()));
             } 
             // fall through
           case 83: break;
           case 42: 
-            { System.out.println("Encontre una Conversion: " + yytext());
-    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
-    tokens.add(new Token("funconversion",yytext()));
+            { tokens.add(new Token("funconversion",yytext()));
             } 
             // fall through
           case 84: break;

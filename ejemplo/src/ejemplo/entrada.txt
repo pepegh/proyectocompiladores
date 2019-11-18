@@ -1,0 +1,9 @@
+/* area de inclusion de bibliotecas externas */ 
+ // ninguna librerıa que cargar
+ 
+ /* area de declaracion de clases */ 
+ clase Impar 
+ propiedades publicas: 
+ cadena hola 
+ metodos publicas: 
+ entero esImpar(entero numero) = entero[]

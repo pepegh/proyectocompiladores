@@ -13,6 +13,7 @@ import java.util.logging.Logger;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
+import java.util.Scanner;
 
 /**
  *
@@ -25,18 +26,24 @@ public class Ejemplo {
      */
     public static void main(String[] args) {
         try {
+        
+            String ruta;
+
+            Scanner teclado = new Scanner(System.in);
+            System.out.print("Introduzca la ruta del archivo .loop a leer: ");
+            ruta = teclado.nextLine();
+            System.out.println("ruta = "+ruta );
             
-            
-            Numero analizadorNumero = new Numero(new FileReader("src/ejemplo/entrada.txt"));
+            Numero analizadorNumero = new Numero(new FileReader(ruta));
             
             analizadorNumero.next_token();
             
             /*analizadorNumero.tokens.forEach((token) -> {
                 System.out.println(token);});*/
             //impresion de tokens en consola
-            for (int i = 0; i<analizadorNumero.tokens.size();i++){
+            /*for (int i = 0; i<analizadorNumero.tokens.size();i++){
                 System.out.println("Tipo = "+analizadorNumero.tokens.get(i).getTipo() + " Lexema = "+analizadorNumero.tokens.get(i).getLexema() );
-            }
+            }*/
             //impresion de tokens en archivo tokens.txt
             FileWriter fichero = null;
             PrintWriter pw = null;

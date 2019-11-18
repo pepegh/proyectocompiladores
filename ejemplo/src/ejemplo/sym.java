@@ -12,5 +12,7 @@ package ejemplo;
 public class sym {
     
     public static final int EOF=0;
+    static int OPENPAR;
+    static int CLOSEPAR;
     
 }

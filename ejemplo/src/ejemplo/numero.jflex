@@ -24,13 +24,15 @@ import java.util.ArrayList;
 %init}
 
 
-entero = [0-9]+
-real = {entero}\.[\d]
+entero = \-?[0-9]+|\+?[0-9]+
+real = {entero}\.[\d]+
 cadena = [A-Za-z]+
+archivo = {cadena}[\d]*\."loop"
 verdadero = "verdadero"
 falso = "falso"
 booleano = {verdadero} | {falso}
-tipovar = "entero"|"real"|"cadena"|"booleano"
+tipovar = "entero"|"real"|"cadena"|"booleano"|"nulo"
+static = "estatico"
 mas = "+"
 menos = "-"
 por = "\*"
@@ -38,6 +40,8 @@ div = "\/"
 modulo = "%"
 exponenciacion = "^"
 aritmeticos = {mas}|{menos}|{por}|{div}|{modulo}|{exponenciacion}
+funcmath = "seno"|"coseno"|"tangente"|"logaritmo"|"raiz"
+import = "importar"
 igual = "\="
 asignacion = {igual}
 openpar = "("
@@ -47,12 +51,13 @@ menorq = "\<"
 dospuntos = ":"
 opencorch = "\["
 closecorch = "\]"
+comilla = "\""
 igualq = {igual}{igual}
 distintoq = \!{igual}
 condiciones = {mayorq}|{menorq}|{igualq}|{distintoq}
 puntoycoma = ";"
 findelinea = \n|\r|\r\n|{puntoycoma}
-ignorar = {findelinea} | [\t\f]
+ignorar = [\t\f]
 inicom = {div}{div}|{div}{por}
 fincom = {por}{div}
 incremento = {mas}{mas}
@@ -62,11 +67,33 @@ class = "clase"
 extends = "extiende"
 props = "propiedades"
 methods = "metodos"
+include = "incluir"
 tipoacceso = "publicas"|"privadas"|"protegidas"|"publicos"|"privados"|"protegidos"
+if = "si"
+then = "entonces"
+return = "devolver"
+else = "sino"
+for = "desde"
+while = "mientras"
+do = "hacer"
+print = "escribir"
+cadenaentero = "cadenaAEntero"
+cadenareal = "cadenaAReal"
+cadenabol = "cadenaABoleano"
+delete = "eliminar"
+conversiones = {cadenaentero}|{cadenareal}|{cadenabol}
+instance = "instanciar"
+
 
 %%
+{findelinea} {
+    System.out.println("Encontre un Fin de linea: " + yytext());
+    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
+    tokens.add(new Token("fi",yytext()));
+}
 
-{ignorar} { }
+
+
 
 {entero} {
     
@@ -87,6 +114,108 @@ tipoacceso = "publicas"|"privadas"|"protegidas"|"publicos"|"privados"|"protegido
     System.out.println("Encontre un Booleano: " + yytext());
     System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
     tokens.add(new Token("booleano",yytext()));
+}
+
+{static} {
+    System.out.println("Encontre un Estatico: " + yytext());
+    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
+    tokens.add(new Token("static",yytext()));
+}
+
+{include} {
+    System.out.println("Encontre una Inclucion: " + yytext());
+    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
+    tokens.add(new Token("include",yytext()));
+}
+
+{import} {
+    System.out.println("Encontre una Importacion: " + yytext());
+    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
+    tokens.add(new Token("import",yytext()));
+}
+
+{archivo} {
+    System.out.println("Encontre un Archivo: " + yytext());
+    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
+    tokens.add(new Token("file",yytext()));
+}
+
+{instance} {
+    System.out.println("Encontre una Instanciacion: " + yytext());
+    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
+    tokens.add(new Token("instance",yytext()));
+}
+
+{delete} {
+    System.out.println("Encontre una Eliminacion: " + yytext());
+    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
+    tokens.add(new Token("delete",yytext()));
+}
+
+{conversiones} {
+    System.out.println("Encontre una Conversion: " + yytext());
+    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
+    tokens.add(new Token("funconversion",yytext()));
+}
+
+{funcmath} {
+    System.out.println("Encontre una funcion matematica: " + yytext());
+    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
+    tokens.add(new Token("funcmath",yytext()));
+}
+
+{if} {
+    System.out.println("Encontre un Si: " + yytext());
+    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
+    tokens.add(new Token("if",yytext()));
+}
+
+{then} {
+    System.out.println("Encontre un Entonces: " + yytext());
+    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
+    tokens.add(new Token("then",yytext()));
+}
+
+{return} {
+    System.out.println("Encontre un Retorno: " + yytext());
+    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
+    tokens.add(new Token("return",yytext()));
+}
+
+{else} {
+    System.out.println("Encontre un Sino: " + yytext());
+    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
+    tokens.add(new Token("else",yytext()));
+}
+
+{for} {
+    System.out.println("Encontre un Desde: " + yytext());
+    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
+    tokens.add(new Token("for",yytext()));
+}
+
+{while} {
+System.out.println("Encontre un Mientras: " + yytext());
+    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
+    tokens.add(new Token("while",yytext()));
+}
+
+{do} {
+System.out.println("Encontre un Hacer: " + yytext());
+    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
+    tokens.add(new Token("do",yytext()));
+}
+
+{print} {
+    System.out.println("Encontre un Escribir: " + yytext());
+    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
+    tokens.add(new Token("print",yytext()));
+}
+
+{comilla} {
+    System.out.println("Encontre una Comilla: " + yytext());
+    System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
+    tokens.add(new Token("comilla",yytext()));
 }
 
 {tipovar} {
@@ -177,12 +306,14 @@ tipoacceso = "publicas"|"privadas"|"protegidas"|"publicos"|"privados"|"protegido
     System.out.println("Encontre una Abertura de parentesis: " + yytext());
     System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
     tokens.add(new Token("openpar",yytext()));
+    return new Symbol(sym.OPENPAR); 
 }
 
 {closepar} {
     System.out.println("Encontre un Cierre de parentesis: " + yytext());
     System.out.println("Encontrado en :" + yyline + "-" + yycolumn);
     tokens.add(new Token("closepar",yytext()));
+    return new Symbol(sym.CLOSEPAR); 
 }
 
 {condiciones} {

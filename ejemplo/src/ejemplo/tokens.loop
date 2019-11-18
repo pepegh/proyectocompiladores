@@ -1,0 +1,207 @@
+Tipo = import ||| Lexema = importar
+Tipo = comilla ||| Lexema = "
+Tipo = file ||| Lexema = index.loop
+Tipo = comilla ||| Lexema = "
+Tipo = fi ||| Lexema = 
+
+Tipo = fi ||| Lexema = 
+
+Tipo = fi ||| Lexema = 
+
+Tipo = class ||| Lexema = clase
+Tipo = cadena ||| Lexema = Rectangulo
+Tipo = fi ||| Lexema = 
+
+Tipo = props ||| Lexema = propiedades
+Tipo = tipoacceso ||| Lexema = publicas
+Tipo = dospuntos ||| Lexema = :
+Tipo = fi ||| Lexema = 
+
+Tipo = static ||| Lexema = estatico
+Tipo = TipoVariable ||| Lexema = entero
+Tipo = cadena ||| Lexema = ancho
+Tipo = asignacion ||| Lexema = =
+Tipo = entero ||| Lexema = 2
+Tipo = fi ||| Lexema = 
+
+Tipo = TipoVariable ||| Lexema = entero
+Tipo = cadena ||| Lexema = largo
+Tipo = fi ||| Lexema = 
+
+Tipo = methods ||| Lexema = metodos
+Tipo = tipoacceso ||| Lexema = publicos
+Tipo = dospuntos ||| Lexema = :
+Tipo = fi ||| Lexema = 
+
+Tipo = cadena ||| Lexema = constructor
+Tipo = openpar ||| Lexema = (
+Tipo = TipoVariable ||| Lexema = entero
+Tipo = cadena ||| Lexema = l
+Tipo = closepar ||| Lexema = )
+Tipo = fi ||| Lexema = 
+
+Tipo = cadena ||| Lexema = largo
+Tipo = asignacion ||| Lexema = =
+Tipo = cadena ||| Lexema = l
+Tipo = fi ||| Lexema = 
+
+Tipo = fi ||| Lexema = 
+
+Tipo = cadena ||| Lexema = destructor
+Tipo = openpar ||| Lexema = (
+Tipo = closepar ||| Lexema = )
+Tipo = fi ||| Lexema = 
+
+Tipo = delete ||| Lexema = eliminar
+Tipo = cadena ||| Lexema = ancho
+Tipo = fi ||| Lexema = 
+
+Tipo = fi ||| Lexema = 
+
+Tipo = TipoVariable ||| Lexema = entero
+Tipo = cadena ||| Lexema = obtenerArea
+Tipo = openpar ||| Lexema = (
+Tipo = closepar ||| Lexema = )
+Tipo = fi ||| Lexema = 
+
+Tipo = return ||| Lexema = devolver
+Tipo = cadena ||| Lexema = ancho
+Tipo = simaritmetico ||| Lexema = *
+Tipo = cadena ||| Lexema = largo
+Tipo = fi ||| Lexema = 
+
+Tipo = fi ||| Lexema = 
+
+Tipo = opencom ||| Lexema = /*
+Tipo = cadena ||| Lexema = este
+Tipo = cadena ||| Lexema = metodo
+Tipo = cadena ||| Lexema = es
+Tipo = cadena ||| Lexema = el
+Tipo = cadena ||| Lexema = unico
+Tipo = cadena ||| Lexema = que
+Tipo = cadena ||| Lexema = puede
+Tipo = cadena ||| Lexema = ejecutarse
+Tipo = fi ||| Lexema = 
+
+Tipo = simaritmetico ||| Lexema = *
+Tipo = cadena ||| Lexema = sin
+Tipo = cadena ||| Lexema = necesidad
+Tipo = cadena ||| Lexema = de
+Tipo = cadena ||| Lexema = una
+Tipo = cadena ||| Lexema = instancia
+Tipo = cadena ||| Lexema = de
+Tipo = instance ||| Lexema = instanciar
+Tipo = fi ||| Lexema = 
+
+Tipo = simaritmetico ||| Lexema = *
+Tipo = cadena ||| Lexema = la
+Tipo = class ||| Lexema = clase
+Tipo = cadena ||| Lexema = y
+Tipo = cadena ||| Lexema = lograr
+Tipo = cadena ||| Lexema = modificar
+Tipo = cadena ||| Lexema = la
+Tipo = cadena ||| Lexema = propiedad
+Tipo = fi ||| Lexema = 
+
+Tipo = simaritmetico ||| Lexema = *
+Tipo = cadena ||| Lexema = estatica
+Tipo = fi ||| Lexema = 
+
+Tipo = closecom ||| Lexema = */
+Tipo = fi ||| Lexema = 
+
+Tipo = static ||| Lexema = estatico
+Tipo = TipoVariable ||| Lexema = nulo
+Tipo = cadena ||| Lexema = anchoCuadrado
+Tipo = openpar ||| Lexema = (
+Tipo = closepar ||| Lexema = )
+Tipo = fi ||| Lexema = 
+
+Tipo = cadena ||| Lexema = ancho
+Tipo = asignacion ||| Lexema = =
+Tipo = cadena ||| Lexema = ancho
+Tipo = simaritmetico ||| Lexema = *
+Tipo = cadena ||| Lexema = ancho
+Tipo = fi ||| Lexema = 
+
+Tipo = opencom ||| Lexema = //
+Tipo = cadena ||| Lexema = la
+Tipo = cadena ||| Lexema = siguiente
+Tipo = cadena ||| Lexema = l
+Tipo = cadena ||| Lexema = nea
+Tipo = cadena ||| Lexema = genera
+Tipo = cadena ||| Lexema = errores
+Tipo = fi ||| Lexema = 
+
+Tipo = opencom ||| Lexema = //
+Tipo = cadena ||| Lexema = largo
+Tipo = asignacion ||| Lexema = =
+Tipo = cadena ||| Lexema = largo
+Tipo = entero ||| Lexema = +1
+Tipo = fi ||| Lexema = 
+
+Tipo = TipoVariable ||| Lexema = entero
+Tipo = cadena ||| Lexema = Principal
+Tipo = openpar ||| Lexema = (
+Tipo = closepar ||| Lexema = )
+Tipo = fi ||| Lexema = 
+
+Tipo = opencom ||| Lexema = //
+Tipo = cadena ||| Lexema = accediendo
+Tipo = cadena ||| Lexema = a
+Tipo = cadena ||| Lexema = la
+Tipo = cadena ||| Lexema = propiedad
+Tipo = cadena ||| Lexema = ancho
+Tipo = fi ||| Lexema = 
+
+Tipo = print ||| Lexema = escribir
+Tipo = cadena ||| Lexema = Rectangulo
+Tipo = cadena ||| Lexema = ancho
+Tipo = fi ||| Lexema = 
+
+Tipo = opencom ||| Lexema = //
+Tipo = cadena ||| Lexema = instanciando
+Tipo = cadena ||| Lexema = dos
+Tipo = cadena ||| Lexema = rectangulos
+Tipo = fi ||| Lexema = 
+
+Tipo = cadena ||| Lexema = Rectangulo
+Tipo = cadena ||| Lexema = r
+Tipo = entero ||| Lexema = 1
+Tipo = asignacion ||| Lexema = =
+Tipo = instance ||| Lexema = instanciar
+Tipo = cadena ||| Lexema = Rectangulo
+Tipo = openpar ||| Lexema = (
+Tipo = entero ||| Lexema = 5
+Tipo = closepar ||| Lexema = )
+Tipo = fi ||| Lexema = 
+
+Tipo = cadena ||| Lexema = Rectangulo
+Tipo = cadena ||| Lexema = r
+Tipo = entero ||| Lexema = 2
+Tipo = asignacion ||| Lexema = =
+Tipo = instance ||| Lexema = instanciar
+Tipo = cadena ||| Lexema = Rectangulo
+Tipo = openpar ||| Lexema = (
+Tipo = entero ||| Lexema = 10
+Tipo = closepar ||| Lexema = )
+Tipo = fi ||| Lexema = 
+
+Tipo = cadena ||| Lexema = entro
+Tipo = cadena ||| Lexema = a
+Tipo = asignacion ||| Lexema = =
+Tipo = cadena ||| Lexema = a
+Tipo = incremento ||| Lexema = ++
+Tipo = fi ||| Lexema = 
+
+Tipo = TipoVariable ||| Lexema = real
+Tipo = cadena ||| Lexema = b
+Tipo = asignacion ||| Lexema = =
+Tipo = cadena ||| Lexema = b
+Tipo = decremento ||| Lexema = --
+Tipo = fi ||| Lexema = 
+
+Tipo = TipoVariable ||| Lexema = cadena
+Tipo = cadena ||| Lexema = x
+Tipo = condicion ||| Lexema = ==
+Tipo = cadena ||| Lexema = b

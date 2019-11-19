@@ -51,7 +51,6 @@ public class main {
             try
             {
                 String destino;
-
                 Scanner teclado2 = new Scanner(System.in);
                 System.out.print("Introduzca la ruta del archivo tokens.loop a escribir: ");
                 destino = teclado.nextLine();
